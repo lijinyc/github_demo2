@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>bootstrap3.2-morris-demo</title>
+<style type="text/css">
+  .c1{
+     float: right !important;
+     margin-right: 19px;
+     margin-top:-1px;
+  }
+  #h1{
+   color:#0bb184;
+   font-size:34px;
+   font-weight:bold; 
+   position: absolute;
+   left:80px;
+   top:30px;
+  }    
+</style>
+
+<!-- Bootstrap core CSS -->
+<link href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+<Link rel="stylesheet" type="text/css" href="text1.css" />
+</head>
+<body>
+<script src="bootstrap3.2/js/jquery.js"></script>
+<script src="bootstrap3.2/js/bootstrap.min.js"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<!--<script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>    版本做了升级-->
+ <!--   升级后的版本路径<script src="http://morrisjs.github.io/morris.js/js/morris.js"></script>-->
+ <script src="morris.js"></script>
+
+
+
+
+
+
+<div class="col-sm-12">
+<nav class="navbar navbar-default " role="navigation">
+   <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="coll">
+         <form  class="navbar-form">
+	      <div class="form-group">
+	        <span class="control-label">网站：</span>
+	        <select  class="form-control" >
+	          	<option>百度</option>
+	          	<option>新浪</option>
+	          	<option>谷歌</option>
+	          	<option>腾讯</option>
+	          	<option>阿里巴巴</option>
+	          	<option>360</option>
+	          	<option>土豆</option>
+	          </select>
+	          &nbsp;
+	        <span class="control-label">报告时间：</span>
+	        <select  class="form-control" >
+	          	<option>20140120</option>
+	          	<option>20140121</option>
+	          	<option>20140122</option>
+	          </select>
+	          &nbsp;
+	        <button class="btn btn-default" >
+              <span class="glyphicon glyphicon glyphicon-zoom-in"></span> 查询
+           </button>
+           &nbsp;
+            <button type="button" class="btn btn-default" >
+              <span class="glyphicon glyphicon  glyphicon glyphicon-repeat"></span> 刷新
+           </button>
+	      </div>
+	    </form>
+      </div>
+   </div>
+ </nav>
+</div>
+
+ <!-- 第二部分 -->
+<div class="col-sm-12">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+   <div class="panel panel-default">
+     <div class="panel-heading"><span>一、网站信息概览</span>    
+    <span class="c1"><a href="#modal-help" data-toggle="modal"><img src="bootstrap3.2/img/a.jpg" style="margin-right:-100px;" ></a></span>
+    <!-- 弹出框 -->
+    <div class="modal" id="modal-help" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+	 <div class="modal-dialog modal-sm">
+	   <div class="modal-content">
+	     <div class="modal-header">
+	       <button type="button" class="close" data-dismiss="modal">
+	         <span aria-hidden="true">&times;</span>
+	         <span class="sr-only">Close</span>
+	       </button>
+	        <h4 class="model-title" id="myModal">Model标题</h4>
+	     </div>
+	     <div class="modal-body">
+	       <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to 
+              <br>featured content or information.</p>
+	     </div>
+	     <div class="modal-footer">
+	       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	     </div>
+	   </div>
+	 </div>
+	</div>       
+   </div>
+   <!-- 第一部分内容 -->
+    <div class="panel-body">
+    <div class="col-sm-12">
+      <div class="col-sm-3">
+       <h1 id="h1">腾讯</h1>    
+      </div>
+       <div class="col-sm-6">
+       <ul class="list-unstyled">
+         <li><strong>网站首页:</strong>www.baidu.com</li><br>
+         <li><strong>网站分页:</strong>门户</li><br>
+         <li><strong>域名总数:</strong>114985</li><br>
+         <li><strong>IDC 名称:</strong>深圳市腾讯电商信息技术有限公司</li>
+       </ul>
+       </div>
+      <div class="col-sm-3">
+        <ul class="list-unstyled">
+         <li><strong>网站排名:</strong>1</li><br>
+         <li><strong>全国引入:</strong>101227</li><br>
+         <li><strong>全国引入精度：</strong>0.11%</li>
+       </ul>
+      </div>
+    </div>
+    </div>
+   </div>
+   
+   <div class="panel panel-default">
+     <div class="panel-heading"><span>二、资源分析概览</span>
+       <span class="c1"><a href="#modal-help2" data-toggle="modal"><img src="bootstrap3.2/img/a.jpg" style="margin-right:-100px;" ></a></span>
+         <!-- 弹出框 -->
+	    <div class="modal" id="modal-help2" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+		 <div class="modal-dialog modal-sm">
+		   <div class="modal-content">
+		     <div class="modal-header">
+		       <button type="button" class="close" data-dismiss="modal">
+		         <span aria-hidden="true">&times;</span>
+		         <span class="sr-only">Close</span>
+		       </button>
+		        <h4 class="model-title" id="myModal">Model标题</h4>
+		     </div>
+		     <div class="modal-body">
+		       <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to 
+	              <br>featured content or information.</p>
+		     </div>
+		     <div class="modal-footer">
+		       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		     </div>
+		   </div>
+		 </div>
+		</div> 
+     </div>
+     <!-- 第二部分内容 -->
+     <div id="zyfxgl">
+     
+     </div>
+   </div>
+   
+   <div class="panel panel-default">
+     <div class="panel-heading"><span>重复资源分布</span>
+       <span class="c1"><a href="#modal-help3" data-toggle="modal"><img src="bootstrap3.2/img/a.jpg" style="margin-right:-100px;" ></a></span>
+        <!-- 弹出框 -->
+	    <div class="modal" id="modal-help3" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+		 <div class="modal-dialog modal-sm">
+		   <div class="modal-content">
+		     <div class="modal-header">
+		       <button type="button" class="close" data-dismiss="modal">
+		         <span aria-hidden="true">&times;</span>
+		         <span class="sr-only">Close</span>
+		       </button>
+		        <h4 class="model-title" id="myModal">Model标题</h4>
+		     </div>
+		     <div class="modal-body">
+		       <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to 
+	              <br>featured content or information.</p>
+		     </div>
+		     <div class="modal-footer">
+		       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		     </div>
+		   </div>
+		 </div>
+		</div>
+     </div>
+     <!-- 第三部分内容  表格 -->
+       <table class="table">
+         <tr>
+           <th>#</th>
+           <th>域名</th>
+           <th>重复系统</th>
+           <th>重复省份</th>
+         </tr>         
+         <tr>
+           <td>1</td>
+           <td>www.baidu.com</td>
+           <td>IDC,其他</td>
+           <td>广东,北京,上海,武汉</td>
+         </tr>    
+         <tr>
+           <td>2</td>
+           <td>www.baidu.com</td>
+           <td>IDC,其他</td>
+           <td>广东,北京,上海,武汉</td>
+         </tr>  
+         <tr>
+           <td>3</td>
+           <td>www.baidu.com</td>
+           <td>IDC,其他</td>
+           <td>广东,北京,上海,武汉</td>
+         </tr>       
+       </table>
+   </div>
+   
+   <div class="panel panel-default">
+     <div class="panel-heading"><span>网站本网率全网排名</span>
+       <span class="c1"><a href="#modal-help4" data-toggle="modal"><img src="bootstrap3.2/img/a.jpg" style="margin-right:-100px;" ></a></span>
+             <!-- 弹出框 -->
+	    <div class="modal" id="modal-help4" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+		 <div class="modal-dialog modal-sm">
+		   <div class="modal-content">
+		     <div class="modal-header">
+		       <button type="button" class="close" data-dismiss="modal">
+		         <span aria-hidden="true">&times;</span>
+		         <span class="sr-only">Close</span>
+		       </button>
+		        <h4 class="model-title" id="myModal">Model标题</h4>
+		     </div>
+		     <div class="modal-body">
+		       <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to 
+	              <br>featured content or information.</p>
+		     </div>
+		     <div class="modal-footer">
+		       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		     </div>
+		   </div>
+		 </div>
+		</div>
+     </div>
+     <!-- 第四部分内容   -->
+     <div id="wzbwlqgpm"></div>
+   </div>
+   
+   <div class="panel panel-default">
+     <div class="panel-heading"><span>分省视图-网站本网率趋势分析</span>
+       <span class="c1"><a href="#modal-help5" data-toggle="modal"><img src="bootstrap3.2/img/a.jpg" style="margin-right:-100px;" ></a></span>
+       <!-- 弹出框 -->
+       <div class="modal" id="modal-help5" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+		 <div class="modal-dialog modal-sm">
+		   <div class="modal-content">
+		     <div class="modal-header">
+		       <button type="button" class="close" data-dismiss="modal">
+		         <span aria-hidden="true">&times;</span>
+		         <span class="sr-only">Close</span>
+		       </button>
+		        <h4 class="model-title" id="myModal">Model标题</h4>
+		     </div>
+		     <div class="modal-body">
+		       <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to 
+	              <br>featured content or information.</p>
+		     </div>
+		     <div class="modal-footer">
+		       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		     </div>
+		   </div>
+		 </div>
+		</div>
+     </div>
+     <!-- 第五部分内容  -->
+     <div id="wzbwlqsfx"></div>
+   </div>
+   
+   <div class="panel panel-default">
+     <div class="panel-heading"><span>三、热点资源排名</span>
+       <span class="c1"><a href="#modal-help6" data-toggle="modal"><img src="bootstrap3.2/img/a.jpg" style="margin-right:-100px;" ></a></span>
+        <!-- 弹出框 -->
+       <div class="modal" id="modal-help6" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+		 <div class="modal-dialog modal-sm">
+		   <div class="modal-content">
+		     <div class="modal-header">
+		       <button type="button" class="close" data-dismiss="modal">
+		         <span aria-hidden="true">&times;</span>
+		         <span class="sr-only">Close</span>
+		       </button>
+		        <h4 class="model-title" id="myModal">Model标题</h4>
+		     </div>
+		     <div class="modal-body">
+		       <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to 
+	              <br>featured content or information.</p>
+		     </div>
+		     <div class="modal-footer">
+		       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		     </div>
+		   </div>
+		 </div>
+		</div>
+     </div>
+     <!-- 第六部分内容  -->
+     <div class="panel-body">
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+           <div class="panel-heading">热点排名上升TOP10</div>
+             <table class="table ">
+               <tr>
+                 <th>#</th>
+                 <th>域名</th>
+                 <th>解析变化</th>
+               </tr>
+               <tr>
+                 <td>1</td>
+                 <td>www.baidu.com</td>
+                 <td>432</td>
+               </tr>
+               <tr>
+                 <td>2</td>
+                 <td>www.baidu.com</td>
+                 <td>432</td>
+               </tr>
+             </table>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+           <div class="panel-heading">热点排名下降TOP10</div>
+            <table class="table">
+               <tr>
+                 <th>#</th>
+                 <th>域名</th>
+                 <th>解析变化</th>
+               </tr>
+               <tr>
+                 <td>1</td>
+                 <td>www.baidu.com</td>
+                 <td>432</td>
+               </tr>
+               <tr>
+                 <td>2</td>
+                 <td>www.baidu.com</td>
+                 <td>432</td>
+               </tr>
+           </table>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+           <div class="panel-heading">TOP10域名</div>
+            <table class="table table-condensed ">
+               <tr>
+                 <th>#</th>
+                 <th>域名</th>
+                 <th>所属网站</th>
+                 <th>排名变化</th>
+                 <th>DNS解析次数</th>
+               </tr>
+               <tr>
+                 <td>1</td>
+                 <td>www.baidu.com</td>
+                 <td>腾讯</td>
+                 <td>0</td>
+                 <td>49372</td>
+               </tr>
+               <tr>
+                 <td>2</td>
+                 <td>www.baidu.com</td>
+                 <td>腾讯</td>
+                 <td>0</td>
+                 <td>49372</td>
+               </tr>
+               <tr>
+                 <td>3</td>
+                 <td>www.baidu.com</td>
+                 <td>腾讯</td>
+                 <td>0</td>
+                 <td>49372</td>
+               </tr>
+            </table>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+           <div class="panel-heading">出网TOP10域名</div>
+            <table class="table table-condensed  ">
+               <tr>
+                 <th>#</th>
+                 <th>域名</th>
+                 <th>出网解析次数</th>
+                 <th>变化</th>
+                 <th>出网影响率</th>
+               </tr>
+               <tr>
+                 <td>1</td>
+                 <td>www.baidu.com</td>
+                 <td>432223</td>
+                 <td>3214</td>
+                 <td>0.02%</td>
+               </tr>
+               <tr>
+                 <td>2</td>
+                 <td>www.baidu.com</td>
+                 <td>53233</td>
+                 <td>5321</td>
+                 <td>0.01%</td>
+               </tr>
+               <tr>
+                 <td>3</td>
+                 <td>www.baidu.com</td>
+                 <td>53233</td>
+                 <td>5321</td>
+                 <td>0.01%</td>
+               </tr>
+             </table>
+          </div>
+        </div>
+     </div>
+   </div>
+   
+   <div class="panel panel-default" >
+     <div class="panel-heading"><span>四、用户体验概览</span>
+       <span class="c1"><a href="#modal-help7" data-toggle="modal"><img src="bootstrap3.2/img/a.jpg" style="margin-right:-100px;" ></a></span>
+       <!-- 弹出框 -->
+       <div class="modal" id="modal-help7" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+		 <div class="modal-dialog modal-sm">
+		   <div class="modal-content">
+		     <div class="modal-header">
+		       <button type="button" class="close" data-dismiss="modal">
+		         <span aria-hidden="true">&times;</span>
+		         <span class="sr-only">Close</span>
+		       </button>
+		        <h4 class="model-title" id="myModal">Model标题</h4>
+		     </div>
+		     <div class="modal-body">
+		       <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to 
+	              <br>featured content or information.</p>
+		     </div>
+		     <div class="modal-footer">
+		       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		     </div>
+		   </div>
+		 </div>
+		</div>
+     </div>
+     
+     <!-- 第七部分内容  -->
+     <div class="panel-body"></div>
+     <div id="yhtygl"></div>
+   </div>
+   
+   <div class="panel panel-default">
+     <div class="panel-heading"><span>五、总结</span>
+       <span class="c1"><a href="#modal-help8" data-toggle="modal"><img src="bootstrap3.2/img/a.jpg" style="margin-right:-100px;" ></a></span>
+       <!-- 弹出框 -->
+       <div class="modal" id="modal-help8" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+		 <div class="modal-dialog modal-sm">
+		   <div class="modal-content">
+		     <div class="modal-header">
+		       <button type="button" class="close" data-dismiss="modal">
+		         <span aria-hidden="true">&times;</span>
+		         <span class="sr-only">Close</span>
+		       </button>
+		        <h4 class="model-title" id="myModal">Model标题</h4>
+		     </div>
+		     <div class="modal-body">
+		       <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to 
+	              <br>featured content or information.</p>
+		     </div>
+		     <div class="modal-footer">
+		       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		     </div>
+		   </div>
+		 </div>
+		</div>
+     </div>
+     <!-- 第八部分内容  -->
+     <div class="panel-body"></div>
+   </div>
+   </div>   
+</div>
+
+
+<script src="lib/zyfxgl.js"></script>
+<script src="lib/wzbwlqgpm.js"></script>
+<script src="lib/wzbwlqsfx.js"></script>
+<script src="lib/yhtygl.js"></script>
+</body>
+</html>
